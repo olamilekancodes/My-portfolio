@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { NavBar } from "./nav/page";
+import { HeroSection } from "./hero-section/page";
 
 export default function Home() {
   return (
     <div>
-      <p className="text-2xl font-geist-mono">The new font test</p>
-      new portfolio
+      <NavBar />
+      <HeroSection />
     </div>
   );
 }
