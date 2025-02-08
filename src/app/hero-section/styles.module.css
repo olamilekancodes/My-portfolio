@@ -1,0 +1,15 @@
+.rotatingText {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
