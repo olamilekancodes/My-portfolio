@@ -6,7 +6,7 @@ export const HeroSection = () => {
     <div className="bg-[#040404] flex flex-col items-center justify-center h-screen relative">
       <div className="w-[250px] h-[250px] overflow-hidden rounded-full relative">
         <Image
-          src="/images/hero-image.jpeg"
+          src="/Images/hero-image.jpeg"
           alt="nobody knows"
           width={250}
           height={250}
