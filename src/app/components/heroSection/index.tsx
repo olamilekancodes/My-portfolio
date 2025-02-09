@@ -7,7 +7,7 @@ export const HeroSection = () => {
       <div className="w-[250px] h-[250px] overflow-hidden rounded-full relative">
         <Image
           src="/images/hero-image.jpeg"
-          alt="hero image"
+          alt="nobody knows"
           width={250}
           height={250}
           className="rounded-full"
