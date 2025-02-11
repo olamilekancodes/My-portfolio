@@ -3,11 +3,11 @@ import styles from "./styles.module.css";
 
 export const HeroSection = () => {
   return (
-    <div className="bg-[#040404] flex flex-col items-center justify-center h-screen relative">
+    <div className="bg-[#040404] flex flex-col items-center justify-center h-screen relative ">
       <div className="w-[250px] h-[250px] overflow-hidden rounded-full relative">
         <Image
           src="/Images/hero-image.jpeg"
-          alt="nobody knows"
+          alt="Image of Olamilekan AKanni"
           width={250}
           height={250}
           className="rounded-full"
