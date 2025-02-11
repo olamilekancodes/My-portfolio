@@ -1,9 +1,19 @@
 import Image from "next/image";
+
 import styles from "./styles.module.css";
 
 export const HeroSection = () => {
   return (
-    <div className="bg-[#040404] flex flex-col items-center justify-center h-screen relative ">
+    <div className="relative flex flex-col items-center justify-center h-screen  bg-[#040404df]">
+      <div className="absolute inset-0 z-[-1]">
+        <Image
+          src="/Images/hero-bg.jpg"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
       <div className="w-[250px] h-[250px] overflow-hidden rounded-full relative">
         <Image
           src="/Images/hero-image.jpeg"

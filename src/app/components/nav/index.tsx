@@ -45,7 +45,8 @@ const LogoWrapper = styled.div`
     height: 8px;
     background-color: #126cf8;
     border-radius: 50%;
-    transition: 0.5s ease-in-out;
+
+    transition-delay: 0.5s ease-in-out;
   }
 `;
 
