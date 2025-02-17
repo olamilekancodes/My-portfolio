@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Pacifico } from "next/font/google";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -10,18 +9,11 @@ const navItems = [
   { id: "contact", label: "Contact" },
 ];
 
-const pacifico = Pacifico({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-pacifico",
-});
-
 export const NavBar = () => {
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 px-10">
-      <div className="relative inline-block p-1 cursor-pointer after:content-[''] after:absolute after:bottom-0 after:right-[-7px] after:w-0 after:h-0 after:bg-[#126cf8] after:rounded-full after:transition-all after:duration-500 hover:after:w-2 hover:after:h-2">
-        <div className="flex flex-row items-center gap-1">
+      <div className="relative inline-block p-1 cursor-pointer after:content-[''] after:absolute after:bottom-[10px] after:right-[-6px] after:w-0 after:h-0 after:bg-[#126cf8] after:rounded-full after:transition-all after:duration-500 hover:after:w-2 hover:after:h-2">
+        <div className="flex flex-row items-end gap-1 ">
           <div className="w-12 h-12 overflow-hidden rounded-full flex items-center justify-center border-4 border-white">
             <Image
               src="/Images/nav-image.jpg"
@@ -31,7 +23,7 @@ export const NavBar = () => {
               className="rounded-full object-cover"
             />
           </div>
-          <p className={`${pacifico.variable}`}>lamilekan</p>
+          <p className="itim font-medium text-[30px]">lamilekan</p>
         </div>
       </div>
 

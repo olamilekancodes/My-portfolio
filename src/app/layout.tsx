@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Rubik, Inter } from "next/font/google";
+import { Inter, Itim } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+});
+
+const itim = Itim({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-itim",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      {/* <body className={`${inter.className} antialiased`}>{children}</body> */}
+      <body className={`${inter.variable} ${itim.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
