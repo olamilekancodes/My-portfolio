@@ -20,7 +20,7 @@ export const HeroSection = () => {
         <div className="flex flex-row gap-5 absolute top-[-3rem] left-0 ">
           <Image
             src="/Images/eclipse.png"
-            alt="step-image1"
+            alt="eclipse-image"
             width={20}
             height={20}
           />
@@ -38,14 +38,22 @@ export const HeroSection = () => {
         <div className="flex flex-row gap-5 absolute bottom-[-8rem]  left-28 rotate-90 ">
           <Image
             src="/Images/blue-step.png"
-            alt="step-image1"
+            alt="step-image2"
             width={70}
             height={70}
           />
         </div>
       </div>
-      <div>
-        <p className="text-3xl w-1/2">Olamilekan AKanni</p>
+      <div className=" flex items-center justify-center w-1/2 border-2 border-white ">
+        <div className="">
+          <Image
+            src="/Images/hero-image.png"
+            alt="hero-image"
+            width={250}
+            height={250}
+            className="rounded-[20px]"
+          />
+        </div>
       </div>
     </div>
   );
