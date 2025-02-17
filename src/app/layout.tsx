@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Rubik, Inter } from "next/font/google";
 import "./globals.css";
 
-const rubik = Rubik({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
