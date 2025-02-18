@@ -11,10 +11,10 @@ const navItems = [
 
 export const NavBar = () => {
   return (
-    <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 px-10">
-      <div className="relative inline-block p-1 cursor-pointer after:content-[''] after:absolute after:bottom-[0.6rem] after:right-[-6px] after:w-0 after:h-0 after:bg-[#126cf8] after:rounded-full after:transition-all after:duration-500 hover:after:w-2 hover:after:h-2">
+    <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3">
+      <div className="relative inline-block p-1 cursor-pointer after:content-[''] after:absolute after:bottom-[0.6rem] after:right-[-6px] after:w-0 after:h-0 after:bg-[#126cf8] after:rounded-full after:transition-all after:duration-500 md:hover:after:w-2 md:hover:after:h-2 hover:after:h-1 hover:after:w-1">
         <div className="flex flex-row items-end gap-1 ">
-          <div className="w-12 h-12 overflow-hidden rounded-full flex items-center justify-center border-4 border-white">
+          <div className="md:w-12 md:h-12 w-10 h-10 overflow-hidden rounded-full flex items-center justify-center border-4 border-white">
             <Image
               src="/Images/nav-image.jpg"
               alt="Nav Image"
@@ -23,7 +23,9 @@ export const NavBar = () => {
               className="rounded-full object-cover"
             />
           </div>
-          <p className="itim font-medium text-[1.9rem]">lamilekan</p>
+          <p className="itim font-medium md:text-[1.9rem] text-[1.4rem]">
+            lamilekan
+          </p>
         </div>
       </div>
 

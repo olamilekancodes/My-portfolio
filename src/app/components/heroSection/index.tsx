@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between text-white py-10 mb-10 md:h-[37rem] gap-12 md:gap-0">
+    <div className="flex flex-col md:flex-row items-center justify-between text-white py-10 mb-10 md:h-[37rem] gap-15 md:gap-0">
       <div className="flex flex-col w-full md:w-1/2 lg:gap-10 gap-7 relative justify-center my-10 md:my-0">
         <Image
           src="/Images/eclipse.png"
