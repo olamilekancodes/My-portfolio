@@ -27,7 +27,7 @@ export const NavBar = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex flex-row gap-10">
+      <div className="hidden lg:flex flex-row gap-10">
         <div className="flex flex-row justify-center items-center gap-10 hover:text-[#939393] transition-colors duration-100">
           {navItems.map((navItem, index) => (
             <p
