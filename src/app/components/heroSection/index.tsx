@@ -3,7 +3,14 @@ import Image from "next/image";
 export const HeroSection = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between text-white py-10 mb-10 md:h-[37rem] gap-12 md:gap-0">
-      <div className="flex flex-col w-full md:w-1/2 lg:gap-10 gap-7 relative justify-center  my-10 md:my-0">
+      <div className="flex flex-col w-full md:w-1/2 lg:gap-10 gap-7 relative justify-center my-10 md:my-0">
+        <Image
+          src="/Images/eclipse.png"
+          alt="eclipse-image"
+          width={40}
+          height={40}
+        />
+
         <div className=" text-[#6091e0]">
           <h1 className="lg:text-4xl md:text-3xl text-2xl itim">
             Olamilekan Akanni
@@ -12,6 +19,7 @@ export const HeroSection = () => {
             <i>Frontend Developer</i>
           </h3>
         </div>
+
         <p className="md:text-sm text-xs text-left font-extralight tracking-tight w-full md:w-3/4">
           I specialize in building sleek, responsive, and highly interactive
           user interfaces. My expertise lies in crafting scalable and
@@ -19,32 +27,23 @@ export const HeroSection = () => {
           different devices and screen sizes.
         </p>
 
-        <div className="flex flex-row gap-5 absolute top-[-4rem] left-0 ">
-          <Image
-            src="/Images/eclipse.png"
-            alt="eclipse-image"
-            width={40}
-            height={40}
-          />
-        </div>
-
-        <div className="hidden md:flex flex-row gap-5 absolute top-[-3rem] right-16 -rotate-180">
-          <Image
-            src="/Images/white-step.png"
-            alt="step-image1"
-            width={70}
-            height={70}
-            className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
-          />
-        </div>
-
-        <div className="hidden md:flex flex-row gap-5 absolute bottom-[-8rem]  left-28 rotate-90 ">
+        <div className="ml-16">
           <Image
             src="/Images/blue-step.png"
             alt="step-image2"
             width={70}
             height={70}
-            className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
+            className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] lg:w-[70px] lg:h-[70px] rotate-90"
+          />
+        </div>
+
+        <div className="flex flex-row gap-5 absolute top-[-3rem] right-16 -rotate-180">
+          <Image
+            src="/Images/white-step.png"
+            alt="step-image1"
+            width={70}
+            height={70}
+            className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] lg:w-[70px] lg:h-[70px]"
           />
         </div>
       </div>
