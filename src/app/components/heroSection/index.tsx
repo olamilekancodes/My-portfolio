@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-row items-center justify-between h-screen text-white">
+    <div className="flex flex-row items-center justify-between text-white py-10 mb-10 h-[37rem]">
       <div className="flex flex-col w-1/2 gap-10 relative justify-center">
         <div className=" text-[#6091e0]">
           <h1 className="text-4xl itim">Olamilekan Akanni</h1>
@@ -10,19 +10,19 @@ export const HeroSection = () => {
             <i>Frontend Developer</i>
           </h3>
         </div>
-        <p className="text-sm text-justify font-extralight tracking-tight">
+        <p className="text-sm text-justify font-extralight tracking-tight w-3/4">
           I specialize in building sleek, responsive, and highly interactive
           user interfaces. My expertise lies in crafting scalable and
           maintainable codebases, ensuring seamless user experiences across
           different devices and screen sizes.
         </p>
 
-        <div className="flex flex-row gap-5 absolute top-[-3rem] left-0 ">
+        <div className="flex flex-row gap-5 absolute top-[-4rem] left-0 ">
           <Image
             src="/Images/eclipse.png"
             alt="eclipse-image"
-            width={20}
-            height={20}
+            width={40}
+            height={40}
           />
         </div>
 
@@ -44,15 +44,38 @@ export const HeroSection = () => {
           />
         </div>
       </div>
-      <div className=" flex items-center justify-center w-1/2 border-2 border-white ">
-        <div className="">
+
+      <div className=" flex items-center justify-center w-1/2  ">
+        <div className="relative w-[17.5rem] h-[17.5rem] ">
           <Image
             src="/Images/hero-image.png"
             alt="hero-image"
             width={250}
             height={250}
-            className="rounded-[20px]"
+            className="rounded-[1.25rem] z-20 relative"
           />
+
+          <div className="rounded-[0.6rem] w-[15rem] h-[13.75rem] absolute bottom-4 right-0 border-[#eeeeee] border-2 z-0"></div>
+
+          <div>
+            <Image
+              src="/Images/box-vector.png"
+              alt="square vector"
+              width={70}
+              height={70}
+              className="z-10 absolute -bottom-[5px] -right-[2.8rem]"
+            />
+          </div>
+
+          <div>
+            <Image
+              src="/Images/box-vector.png"
+              alt="square vector"
+              width={70}
+              height={70}
+              className="z-10 absolute -top-[2.5rem] -left-[2.8rem] rotate-180"
+            />
+          </div>
         </div>
       </div>
     </div>
