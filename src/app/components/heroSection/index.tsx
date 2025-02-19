@@ -49,16 +49,16 @@ export const HeroSection = () => {
       </div>
 
       <div className=" flex items-center justify-center  w-full md:w-1/2  my-10 md:my-0 ">
-        <div className="relative w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px]  ">
+        <div className="relative w-[12.5rem] h-[12.5rem] md:w-[15.63rem] md:h-[15.63rem] lg:w-[17.5rem] lg:h-[17.5rem]  ">
           <Image
             src="/Images/hero-image.png"
             alt="hero-image"
             width={250}
             height={250}
-            className="rounded-[1.25rem] z-20 relative md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px] object-cover w-[170px] h-[170px]"
+            className="rounded-[1.25rem] z-[5] relative  md:w-[12.5rem] md:h-[12.5rem] lg:w-[16.25rem] lg:h-[16.25rem] object-cover w-[10.63rem] h-[10.63rem]"
           />
 
-          <div className="rounded-[0.6rem] w-[160px] h-[150px] md:w-[200px] md:h-[180px] lg:w-[240px] lg:h-[220px] absolute bottom-3 right-3 lg:bottom-4 lg:right-0 md:bottom-7 md:right-6 border-[#eeeeee] border-2 z-0"></div>
+          <div className="rounded-[0.6rem] w-[10rem] h-[10rem] md:w-[12.5rem] md:h-[11.25rem] lg:w-[15rem] lg:h-[13.75rem] absolute bottom-3 right-3 lg:bottom-4 lg:right-0 md:bottom-7 md:right-6 border-[#eeeeee] border-2 z-0"></div>
 
           <div>
             <Image
@@ -66,7 +66,7 @@ export const HeroSection = () => {
               alt="square vector"
               width={70}
               height={70}
-              className="z-10 absolute -bottom-[3px] -right-[20px] md:bottom-[13px] md:-right-[8px] lg:-bottom-[5px] lg:-right-[2.8rem] w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] "
+              className="z-0 absolute -bottom-[3px] -right-[1.25rem] md:bottom-[13px] md:-right-[8px] lg:-bottom-[5px] lg:-right-[2.8rem] w-[3.13rem] h-[3.13rem] lg:w-[4.38rem] lg:h-[4.38rem] "
             />
           </div>
 
@@ -76,7 +76,7 @@ export const HeroSection = () => {
               alt="square vector"
               width={70}
               height={70}
-              className="z-10 absolute -top-[30px] -left-[35px] lg:-top-[2.5rem] lg:-left-[2.8rem] rotate-180 w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
+              className="z-0 absolute -top-[30px] -left-[35px] lg:-top-[2.5rem] lg:-left-[2.8rem] rotate-180 w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
             />
           </div>
         </div>

@@ -1,6 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { FaBars } from "react-icons/fa6";
+import { AiOutlineClose } from "react-icons/ai";
+import { useEffect, useRef, useState } from "react";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -10,6 +13,29 @@ const navItems = [
 ];
 
 export const NavBar = () => {
+  const [openSideBar, setOpenSideBar] = useState(false);
+
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
+        setOpenSideBar(false);
+      }
+    };
+
+    if (openSideBar) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [openSideBar]);
+
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3">
       <div className="relative inline-block p-1 cursor-pointer after:content-[''] after:absolute after:bottom-[0.6rem] after:right-[-6px] after:w-0 after:h-0 after:bg-[#126cf8] after:rounded-full after:transition-all after:duration-500 md:hover:after:w-2 md:hover:after:h-2 hover:after:h-1 hover:after:w-1">
@@ -29,6 +55,13 @@ export const NavBar = () => {
         </div>
       </div>
 
+      <div
+        className="lg:hidden cursor-pointer"
+        onClick={() => setOpenSideBar(true)}
+      >
+        <FaBars size={20} />
+      </div>
+
       <div className="hidden lg:flex flex-row gap-10">
         <div className="flex flex-row justify-center items-center gap-10 hover:text-[#939393] transition-colors duration-100">
           {navItems.map((navItem, index) => (
@@ -44,6 +77,40 @@ export const NavBar = () => {
         <button className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6]">
           Resume
         </button>
+      </div>
+
+      <div
+        ref={sidebarRef}
+        className={`fixed top-0 right-0 h-full w-1/2 bg-[#080808] shadow-lg transform ${
+          openSideBar ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out z-[10] lg:hidden`}
+      >
+        <div className="flex justify-end my-6 p-2 mr-1">
+          <AiOutlineClose
+            size={24}
+            className="text-white cursor-pointer"
+            onClick={() => setOpenSideBar(false)}
+          />
+        </div>
+
+        <div className="flex flex-col items-center mt-10 gap-6">
+          {navItems.map((navItem) => (
+            <p
+              key={navItem.id}
+              className="text-white text-md font-medium cursor-pointer hover:text-gray-400"
+              onClick={() => setOpenSideBar(false)}
+            >
+              {navItem.label}
+            </p>
+          ))}
+
+          <button
+            className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6]"
+            onClick={() => setOpenSideBar(false)}
+          >
+            Resume
+          </button>
+        </div>
       </div>
     </div>
   );
