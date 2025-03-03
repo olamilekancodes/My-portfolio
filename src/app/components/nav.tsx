@@ -37,7 +37,7 @@ export const NavBar = () => {
   }, [openSideBar]);
 
   return (
-    <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3">
+    <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3  bg-[#0808088e] ">
       <div className="relative inline-block p-1 cursor-pointer after:content-[''] after:absolute after:bottom-[0.6rem] after:right-[-6px] after:w-0 after:h-0 after:bg-[#126cf8] after:rounded-full after:transition-all after:duration-500 md:hover:after:w-2 md:hover:after:h-2 hover:after:h-1 hover:after:w-1">
         <div className="flex flex-row items-end gap-1 ">
           <div className="md:w-12 md:h-12 w-10 h-10 overflow-hidden rounded-full flex items-center justify-center border-4 border-white">
