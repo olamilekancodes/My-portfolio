@@ -25,7 +25,7 @@ export const HeroSection = () => {
 
       <div className=" flex items-center justify-center  w-full md:w-1/2  my-10 md:my-0 ">
         <Image
-          src="/Images/hero.png"
+          src="/Images/hero-image.png"
           alt="hero-image"
           width={500}
           height={500}
