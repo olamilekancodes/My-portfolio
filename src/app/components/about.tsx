@@ -17,8 +17,8 @@ const skills = [
 
 export const About = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center text-white gap-20 md:gap-0 mb-20 h-[38rem] ">
-      <div className=" w-full md:w-3/6 flex flex-col h-full justify-between">
+    <div className="flex flex-col md:flex-row justify-between items-center text-white gap-20 md:gap-0 mb-20 ">
+      <div className=" w-full md:w-3/6 flex flex-col">
         <Image
           src="/Images/vectors.png"
           alt="eclipse-vector"
@@ -27,7 +27,7 @@ export const About = () => {
           className="w-[100px]"
         />
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 my-10">
           <h2 className="itim">"I build experiences, not just interfaces"</h2>
           <p className="text-left w-full text-sm md:text-base">
             Over the past few years, building experiences and interfaces has
@@ -66,8 +66,8 @@ export const About = () => {
         />
       </div>
 
-      <div className="md:w-2/6 w-full h-full flex flex-col justify-between">
-        <div className="flex flex-col gap-3 h-full justify-center">
+      <div className="md:w-2/6 w-full flex flex-col justify-between gap-10">
+        <div className="flex flex-col gap-3  justify-center">
           <Image
             src="/Images/box-vector.png"
             alt="box-vector"
