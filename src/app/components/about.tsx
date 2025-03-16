@@ -20,7 +20,7 @@ export const About = () => {
     <div className="flex flex-col md:flex-row justify-between items-center text-white gap-20 md:gap-0 mb-20 h-[38rem] ">
       <div className=" w-full md:w-3/6 flex flex-col h-full justify-between">
         <Image
-          src="/Images/eclipse-vector.png"
+          src="/Images/vectors.png"
           alt="eclipse-vector"
           width={100}
           height={100}
@@ -58,7 +58,7 @@ export const About = () => {
         </div>
 
         <Image
-          src="/Images/eclipse-vector.png"
+          src="/Images/vectors.png"
           alt="eclipse-vector"
           width={100}
           height={100}
@@ -82,7 +82,10 @@ export const About = () => {
           <div className="flex gap-10">
             <ul className="flex flex-col gap-1 ml-5">
               {skills.slice(0, 6).map((skill, index) => (
-                <li className="text-[12px] list-disc " key={index}>
+                <li
+                  className="text-[12px] list-disc marker:text-orange-300"
+                  key={index}
+                >
                   {skill}
                 </li>
               ))}
@@ -90,7 +93,10 @@ export const About = () => {
 
             <ul className="flex flex-col gap-1 ml-5">
               {skills.slice(6, 12).map((skill, index) => (
-                <li className="text-[12px] list-disc " key={index}>
+                <li
+                  className="text-[12px] list-disc marker:text-orange-300"
+                  key={index}
+                >
                   {skill}
                 </li>
               ))}
