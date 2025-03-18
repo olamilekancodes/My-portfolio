@@ -68,7 +68,7 @@ export const About = () => {
         />
       </div>
 
-      <div className="md:w-2/6 w-full flex flex-col justify-between gap-10">
+      <div className="md:w-2/6 w-full flex flex-col justify-center items-center gap-10">
         <div className="flex flex-col gap-3  justify-center">
           <Image
             src="/Images/box-vector.png"

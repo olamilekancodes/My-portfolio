@@ -76,7 +76,7 @@ export const Projects = ({}: Props) => {
           rel="noopener noreferrer"
         >
           <div
-            className={`flex gap-5 p-7 cursor-pointer transition-colors duration-300 rounded-lg border-b-2 ${
+            className={`flex md:flex-row flex-col gap-5 p-7 cursor-pointer transition-colors duration-300 rounded-lg border-b-2 ${
               hoveredProjectId === project.id
                 ? "border-b-[#f2c4a0]"
                 : "border-b-white"
@@ -89,8 +89,9 @@ export const Projects = ({}: Props) => {
               alt={`${project.name} image`}
               width={300}
               height={300}
-              className="w-[300px] h-[180px] rounded-lg object-cover"
+              className="md:w-[300px] md:h-[180px] w-full flex md:block justify-center rounded-lg object-cover"
             />
+
             <div className="flex flex-col gap-5">
               <div className={`flex gap-2`}>
                 <h2
