@@ -15,7 +15,7 @@ export const HeroSection = () => {
           </h3>
         </div>
 
-        <p className="text-left w-full md:w-3/4 text-sm md:text-base">
+        <p className="text-left w-full md:w-3/4 text-sm md:text-base text-[#d8d8d8]">
           I specialize in building sleek, responsive, and highly interactive
           user interfaces. My expertise lies in crafting scalable and
           maintainable codebases, ensuring seamless user experiences across

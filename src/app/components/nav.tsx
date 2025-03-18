@@ -9,7 +9,7 @@ const navItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "project", label: "Project" },
-  { id: "contact", label: "Contact" },
+  { id: "contact", label: "Say Hello!" },
 ];
 
 export const NavBar = () => {

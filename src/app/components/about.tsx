@@ -17,7 +17,7 @@ const skills = [
 
 export const About = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center text-white gap-20 md:gap-0 mb-20 ">
+    <div className="flex flex-col md:flex-row justify-between items-center  text-[#d8d8d8] gap-20 md:gap-0 my-10">
       <div className=" w-full md:w-3/6 flex flex-col">
         <Image
           src="/Images/vectors.png"
@@ -28,10 +28,12 @@ export const About = () => {
         />
 
         <div className="flex flex-col gap-5 my-10">
-          <h2 className="itim">"I build experiences, not just interfaces"</h2>
-          <p className="text-left w-full text-sm md:text-base">
+          <h2 className="itim text-white">
+            "I build experiences, not just interfaces"
+          </h2>
+          <p className="text-left w-full text-sm md:text-base ">
             Over the past few years, building experiences and interfaces has
-            been my guiding principle as a<b>Frontend Software Developer</b>.
+            been my guiding principle as a <b>Frontend Software Developer</b>.
             I’ve had the privilege of working with amazing teams across
             different companies, building products that truly make a difference.
             From creating smooth, user-friendly B2C marketplaces to developing
@@ -76,7 +78,7 @@ export const About = () => {
             className=""
           />
         </div>
-        <div className="flex flex-col gap-3 ">
+        <div className="flex flex-col gap-3">
           <h2>Skills</h2>
 
           <div className="flex gap-10">
