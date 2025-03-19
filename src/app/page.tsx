@@ -5,13 +5,10 @@ import { Projects } from "./components/projects";
 
 export default function Home() {
   return (
-    <div className="bg-[#080808]">
-      <NavBar />
-      <div className="m-auto max-w-6xl px-10 flex flex-col gap-10">
-        <HeroSection />
-        <About />
-        <Projects />
-      </div>
+    <div className="m-auto max-w-6xl px-10 flex flex-col gap-10">
+      <HeroSection />
+      <About />
+      <Projects />
     </div>
   );
 }

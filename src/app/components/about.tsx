@@ -17,7 +17,10 @@ const skills = [
 
 export const About = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center  text-[#d8d8d8] gap-20 md:gap-0 my-10">
+    <div
+      id="about"
+      className="flex flex-col md:flex-row justify-between items-center   text-[#d8d8d8] gap-20 md:gap-0 my-10"
+    >
       <div className=" w-full md:w-3/6 flex flex-col">
         <Image
           src="/Images/vectors.png"
@@ -79,7 +82,7 @@ export const About = () => {
           />
         </div>
         <div className="flex flex-col gap-3">
-          <h2>Skills</h2>
+          <h3 className=" text-white">Skills</h3>
 
           <div className="flex gap-10">
             <ul className="flex flex-col gap-1 ml-5">

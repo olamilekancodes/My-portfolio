@@ -1,8 +1,6 @@
 "use client";
 
-import { link } from "fs";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -37,8 +35,8 @@ const projects = [
       "Material UI",
       "Redux",
       "React Query",
-      "Styled-components",
       "Sass/SCSS",
+      "Styled-components",
     ],
     link: "https://people.organogram.app/",
   },
@@ -54,22 +52,21 @@ const projects = [
       "Material UI",
       "Redux",
       "React Query",
-      "Styled-components",
       "Sass/SCSS",
+      "Styled-components",
     ],
     link: "https://payroll.organogram.app/",
   },
 ];
 
-type Props = {};
-export const Projects = ({}: Props) => {
+export const Projects = () => {
   const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col gap-10 my-20 text-white">
+    <div className="flex flex-col gap-10 my-20 text-white" id="projects">
       <h1 className="itim">Recent projects</h1>
       {projects.map((project) => (
-        <Link
+        <a
           href={project.link}
           key={project.id}
           target="_blank"
@@ -94,13 +91,13 @@ export const Projects = ({}: Props) => {
 
             <div className="flex flex-col gap-5">
               <div className={`flex gap-2`}>
-                <h2
+                <h3
                   className={`transition-colors duration-300 ${
                     hoveredProjectId === project.id && "text-[#f2c4a0]"
                   }`}
                 >
                   {project.name}
-                </h2>
+                </h3>
                 <span
                   className={`transition-all duration-300 self-end ${
                     hoveredProjectId === project.id
@@ -127,7 +124,7 @@ export const Projects = ({}: Props) => {
               </div>
             </div>
           </div>
-        </Link>
+        </a>
       ))}
     </div>
   );

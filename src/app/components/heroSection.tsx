@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between text-white py-10 md:h-[37rem] gap-15 md:gap-0">
+    <div
+      id="home"
+      className="flex flex-col md:flex-row items-center justify-between py-10 md:h-[37rem] gap-15 md:gap-0"
+    >
       <div className="flex flex-col w-full md:w-1/2 lg:gap-10 gap-7 relative justify-center my-10 md:my-0">
         <div className="bg-[#126cf8] rounded-full w-12 h-12 md:w-16 md:h-16"></div>
 

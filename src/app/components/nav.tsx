@@ -4,11 +4,12 @@ import Image from "next/image";
 import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const navItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "project", label: "Project" },
+  { id: "projects", label: "Projects" },
   { id: "contact", label: "Say Hello!" },
 ];
 
@@ -35,6 +36,38 @@ export const NavBar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [openSideBar]);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const duration = 900;
+    let startTime: number | null = null;
+
+    const animateScroll = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+
+      const easeInOutCubic =
+        progress < 0.5
+          ? 4 * progress ** 3
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+      if (elapsedTime < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        setOpenSideBar(false);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
 
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3  bg-[#0808088e] ">
@@ -65,18 +98,33 @@ export const NavBar = () => {
       <div className="hidden lg:flex flex-row gap-10">
         <div className="flex flex-row justify-center items-center gap-10 hover:text-[#939393] transition-colors duration-100">
           {navItems.map((navItem, index) => (
-            <p
+            <a
+              href={`#${navItem.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(navItem.id);
+              }}
               key={index}
               className="relative font-medium cursor-pointer p-2 transition-colors hover:text-[#eaeaea] after:content-[''] after:absolute after:bottom-[-7.5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#126cf8] after:transition-[width] after:duration-300 hover:after:w-full"
             >
               {navItem.label}
-            </p>
+            </a>
           ))}
         </div>
 
-        <button className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6]">
+        <a
+          onClick={() => {
+            window.open(
+              "https://drive.google.com/file/d/1isXLGCJL-S9PpLF1U99PWN2pf4ASP5Kd/view?usp=sharing",
+              "_blank"
+            );
+            setOpenSideBar(false);
+          }}
+          aria-label="View Olamilekan's Resume "
+          className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6] cursor-pointer"
+        >
           Resume
-        </button>
+        </a>
       </div>
 
       <div
@@ -95,21 +143,32 @@ export const NavBar = () => {
 
         <div className="flex flex-col items-center mt-10 gap-6">
           {navItems.map((navItem) => (
-            <p
+            <a
+              href={`#${navItem.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(navItem.id);
+              }}
               key={navItem.id}
               className="text-white text-md font-medium cursor-pointer hover:text-gray-400"
-              onClick={() => setOpenSideBar(false)}
             >
               {navItem.label}
-            </p>
+            </a>
           ))}
 
-          <button
-            className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6]"
-            onClick={() => setOpenSideBar(false)}
+          <a
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/file/d/1isXLGCJL-S9PpLF1U99PWN2pf4ASP5Kd/view?usp=sharing",
+                "_blank"
+              );
+              setOpenSideBar(false);
+            }}
+            aria-label="View Olamilekan's Resume "
+            className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6] cursor-pointer"
           >
             Resume
-          </button>
+          </a>
         </div>
       </div>
     </div>
