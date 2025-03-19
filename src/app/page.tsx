@@ -1,6 +1,6 @@
 import { About } from "./components/about";
+import Contact from "./components/contact";
 import { HeroSection } from "./components/heroSection";
-import { NavBar } from "./components/nav";
 import { Projects } from "./components/projects";
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <About />
       <Projects />
+      <Contact />
     </div>
   );
 }
