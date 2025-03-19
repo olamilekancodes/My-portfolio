@@ -12,7 +12,7 @@ const skills = [
   "Shadcn",
   "Styled-components",
   "Sass/SCSS",
-  "React Query",
+  "Bootstrap",
 ];
 
 export const About = () => {

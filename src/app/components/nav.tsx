@@ -15,6 +15,7 @@ const navItems = [
 
 export const NavBar = () => {
   const [openSideBar, setOpenSideBar] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   const sidebarRef = useRef<HTMLDivElement | null>(null);
 
@@ -38,6 +39,9 @@ export const NavBar = () => {
   }, [openSideBar]);
 
   const scrollToSection = (id: string) => {
+    setOpenSideBar(false);
+    setActiveSection(id);
+
     const element = document.getElementById(id);
     if (!element) return;
 
@@ -61,13 +65,32 @@ export const NavBar = () => {
 
       if (elapsedTime < duration) {
         requestAnimationFrame(animateScroll);
-      } else {
-        setOpenSideBar(false);
       }
     };
 
     requestAnimationFrame(animateScroll);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      let currentSection = "home";
+
+      for (const navItem of navItems) {
+        const element = document.getElementById(navItem.id);
+        if (element) {
+          const elementTop = element.offsetTop - 100;
+          if (scrollPosition >= elementTop) {
+            currentSection = navItem.id;
+          }
+        }
+      }
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3  bg-[#0808088e] ">
@@ -98,27 +121,31 @@ export const NavBar = () => {
       <div className="hidden lg:flex flex-row gap-10">
         <div className="flex flex-row justify-center items-center gap-10 hover:text-[#939393] transition-colors duration-100">
           {navItems.map((navItem, index) => (
-            <a
+            <Link
               href={`#${navItem.id}`}
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(navItem.id);
               }}
               key={index}
-              className="relative font-medium cursor-pointer p-2 transition-colors hover:text-[#eaeaea] after:content-[''] after:absolute after:bottom-[-7.5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#126cf8] after:transition-[width] after:duration-300 hover:after:w-full"
+              className={`relative font-medium cursor-pointer p-2 transition-colors hover:text-[#eaeaea] after:content-[''] after:absolute after:bottom-[-7.5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#126cf8] after:transition-[width] after:duration-300 ${
+                activeSection === navItem.id
+                  ? "after:w-full text-[#eaeaea]"
+                  : "hover:after:w-full"
+              }`}
             >
               {navItem.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <a
           onClick={() => {
+            setOpenSideBar(false);
             window.open(
               "https://drive.google.com/file/d/1isXLGCJL-S9PpLF1U99PWN2pf4ASP5Kd/view?usp=sharing",
               "_blank"
             );
-            setOpenSideBar(false);
           }}
           aria-label="View Olamilekan's Resume "
           className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6] cursor-pointer"
@@ -143,26 +170,28 @@ export const NavBar = () => {
 
         <div className="flex flex-col items-center mt-10 gap-6">
           {navItems.map((navItem) => (
-            <a
+            <Link
               href={`#${navItem.id}`}
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(navItem.id);
               }}
               key={navItem.id}
-              className="text-white text-md font-medium cursor-pointer hover:text-gray-400"
+              className={`text-white text-md font-medium cursor-pointer hover:text-gray-400 ${
+                activeSection === navItem.id ? "text-gray-400" : ""
+              }`}
             >
               {navItem.label}
-            </a>
+            </Link>
           ))}
 
           <a
             onClick={() => {
+              setOpenSideBar(false);
               window.open(
                 "https://drive.google.com/file/d/1isXLGCJL-S9PpLF1U99PWN2pf4ASP5Kd/view?usp=sharing",
                 "_blank"
               );
-              setOpenSideBar(false);
             }}
             aria-label="View Olamilekan's Resume "
             className="border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6] cursor-pointer"
