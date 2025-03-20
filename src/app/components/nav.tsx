@@ -17,6 +17,8 @@ export const NavBar = () => {
   const [openSideBar, setOpenSideBar] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
 
+  console.log("activesection: ", activeSection);
+
   const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

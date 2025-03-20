@@ -22,19 +22,18 @@ const Contact = () => {
     }
   }, [state, reset]);
 
-  console.log("state: ", state);
-  console.log("result: ", state.result);
-
   return (
     <div
       id="contact"
-      className=" flex items-center justify-center flex-col text-white my-10 gap-20 w-full px-10 py-20"
+      className=" flex items-center justify-center flex-col text-white my-10 gap-20 w-full md:px-10 px-0 py-20"
     >
-      <h1 className="mt-10">Send me a messgae!</h1>
+      <h1 className="mt-10 text-lg md:text-3xl font-medium">
+        Send me a message!
+      </h1>
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-12 w-full my-10"
+        className="flex flex-col gap-12 w-full my-5"
       >
         <div
           className="flex gap-12 flex-col md:flex-row
