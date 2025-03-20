@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Itim } from "next/font/google";
+
 import "./globals.css";
 import { NavBar } from "./components/nav";
 import { FooterModule } from "./components/footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,10 +33,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${itim.variable} antialiased bg-[#080808]`}
       >
+        <Toaster position="top-right" />
         <NavBar />
         <main className="flex-grow">{children}</main>
         <FooterModule />
-        {/* {children} */}
       </body>
     </html>
   );
