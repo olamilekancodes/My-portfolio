@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${itim.variable} antialiased bg-[#080808]`}
       >
-        <Toaster position="top-right" />
+        <Toaster position="top-right" richColors />
         <NavBar />
         <main className="flex-grow">{children}</main>
         <FooterModule />
