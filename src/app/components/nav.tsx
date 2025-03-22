@@ -146,7 +146,7 @@ const NavBar = () => {
           onClick={() => {
             setOpenSideBar(false);
             window.open(
-              "https://drive.google.com/file/d/1isXLGCJL-S9PpLF1U99PWN2pf4ASP5Kd/view?usp=sharing",
+              "https://drive.google.com/file/d/1cOPe_2n4pRmPd3N76WoaWF-2CfNyVVjL/view?usp=sharing",
               "_blank"
             );
           }}
@@ -194,7 +194,7 @@ const NavBar = () => {
             onClick={() => {
               setOpenSideBar(false);
               window.open(
-                "https://drive.google.com/file/d/1isXLGCJL-S9PpLF1U99PWN2pf4ASP5Kd/view?usp=sharing",
+                "https://drive.google.com/file/d/1cOPe_2n4pRmPd3N76WoaWF-2CfNyVVjL/view?usp=sharing",
                 "_blank"
               );
             }}
@@ -209,4 +209,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+export default NavBar;
