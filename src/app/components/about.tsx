@@ -71,42 +71,28 @@ export const About = () => {
         />
       </div>
 
-      <div className="md:w-2/6 w-full flex flex-col justify-center items-center gap-10">
-        <div className="flex flex-col gap-3  justify-center">
-          <Image
-            src="/Images/box-vector.png"
-            alt="box-vector"
-            width={300}
-            height={300}
-            className=""
-          />
-        </div>
-        <div className="flex flex-col gap-3">
-          <h3 className=" text-white">Skills</h3>
+      <div className="md:w-2/6 w-full flex flex-col justify-start gap-10 border">
+        <h2 className=" text-white">Skills</h2>
 
-          <div className="flex gap-10">
-            <ul className="flex flex-col gap-1 ml-5">
-              {skills.slice(0, 6).map((skill, index) => (
-                <li
-                  className="text-[12px] list-disc marker:text-orange-300"
-                  key={index}
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
+        <div className="relative w-full flex flex-wrap gap-5 p-4">
+          {skills.map((skill, index) => {
+            const randomRotation = Math.random() * 40 - 20;
+            const randomX = Math.random() * 20 - 10;
+            const randomY = Math.random() * 20 - 10;
 
-            <ul className="flex flex-col gap-1 ml-5">
-              {skills.slice(6, 12).map((skill, index) => (
-                <li
-                  className="text-[12px] list-disc marker:text-orange-300"
-                  key={index}
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
+            return (
+              <span
+                key={index}
+                className="px-4 py-2 text-black md:text-sm text-[12px] rounded-2xl font-medium shadow-lg"
+                style={{
+                  backgroundColor: `hsl(${Math.random() * 360}, 70%, 70%)`,
+                  transform: `rotate(${randomRotation}deg) translate(${randomX}px, ${randomY}px)`,
+                }}
+              >
+                {skill}
+              </span>
+            );
+          })}
         </div>
       </div>
     </div>
