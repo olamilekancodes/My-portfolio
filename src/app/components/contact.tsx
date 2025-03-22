@@ -94,8 +94,7 @@ const Contact = () => {
           ) : (
             <button
               type="submit"
-              disabled={state.submitting}
-              className="  border-2 border-[#126cf8] text-[#126cf8] px-4 py-2 rounded-md font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6] cursor-pointer"
+              className="border-2 border-[#126cf8] text-[#126cf8] px-10 py-2 rounded-2xl font-medium transition-colors duration-300 hover:border-[#0d5cb6] hover:text-[#0d5cb6] cursor-pointer"
             >
               Send
             </button>

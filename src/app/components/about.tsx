@@ -71,7 +71,7 @@ export const About = () => {
         />
       </div>
 
-      <div className="md:w-2/6 w-full flex flex-col justify-start gap-10 border">
+      <div className="md:w-2/6 w-full flex flex-col justify-start gap-10">
         <h2 className=" text-white">Skills</h2>
 
         <div className="relative w-full flex flex-wrap gap-5 p-4">
