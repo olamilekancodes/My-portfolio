@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const skills = [
   "Next.js",
@@ -81,7 +82,7 @@ export const About = () => {
             const randomY = Math.random() * 20 - 10;
 
             return (
-              <span
+              <motion.span
                 key={index}
                 className="px-4 py-2 text-black md:text-sm text-[12px] rounded-2xl font-medium shadow-lg"
                 style={{
@@ -90,7 +91,7 @@ export const About = () => {
                 }}
               >
                 {skill}
-              </span>
+              </motion.span>
             );
           })}
         </div>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -59,6 +60,11 @@ const projects = [
   },
 ];
 
+const projectVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+};
+
 export const Projects = () => {
   const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null);
 
@@ -66,11 +72,15 @@ export const Projects = () => {
     <div className="flex flex-col gap-10 my-20 text-white" id="projects">
       <h1 className="itim">Recent projects</h1>
       {projects.map((project) => (
-        <a
+        <motion.a
           href={project.link}
           key={project.id}
           target="_blank"
           rel="noopener noreferrer"
+          variants={projectVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <div
             className={`flex md:flex-row flex-col gap-5 p-7 cursor-pointer transition-colors duration-300 rounded-lg border-b-2 ${
@@ -124,7 +134,7 @@ export const Projects = () => {
               </div>
             </div>
           </div>
-        </a>
+        </motion.a>
       ))}
     </div>
   );
