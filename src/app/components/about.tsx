@@ -76,17 +76,12 @@ const AboutModule = () => {
 
         <div className="relative w-full flex flex-wrap gap-5 p-4">
           {skills.map((skill, index) => {
-            const randomRotation = Math.random() * 40 - 20;
-            const randomX = Math.random() * 20 - 10;
-            const randomY = Math.random() * 20 - 10;
-
             return (
               <span
                 key={index}
                 className="px-4 py-2 text-black md:text-sm text-[12px] rounded-2xl font-medium shadow-lg"
                 style={{
                   backgroundColor: `hsl(${Math.random() * 360}, 70%, 70%)`,
-                  transform: `rotate(${randomRotation}deg) translate(${randomX}px, ${randomY}px)`,
                 }}
               >
                 {skill}
