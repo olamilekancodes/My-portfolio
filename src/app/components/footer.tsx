@@ -17,7 +17,7 @@ const socials = [
   },
 ];
 
-export const FooterModule = () => {
+ const FooterModule = () => {
   const [hoveredSocialId, setHoveredSocialId] = useState<string | null>(null);
 
   return (
@@ -46,3 +46,5 @@ export const FooterModule = () => {
     </div>
   );
 };
+
+export default FooterModule

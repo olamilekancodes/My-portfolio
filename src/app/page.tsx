@@ -1,13 +1,14 @@
-import { About } from "./components/about";
+import HeroSection from "./components/heroSection";
+import Projects from "./components/projects";
 import Contact from "./components/contact";
-import { HeroSection } from "./components/heroSection";
-import { Projects } from "./components/projects";
+import AboutModule from "./components/about";
+
 
 export default function Home() {
   return (
     <div className="m-auto max-w-6xl px-10 flex flex-col gap-10">
       <HeroSection />
-      <About />
+      <AboutModule />
       <Projects />
       <Contact />
     </div>

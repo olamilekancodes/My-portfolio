@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const HeroSection = () => {
+ const HeroSection = () => {
   return (
     <div
       id="home"
@@ -37,3 +37,5 @@ export const HeroSection = () => {
     </div>
   );
 };
+
+export default HeroSection

@@ -13,7 +13,7 @@ const navItems = [
   { id: "contact", label: "Say Hello!" },
 ];
 
-export const NavBar = () => {
+const NavBar = () => {
   const [openSideBar, setOpenSideBar] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
 
@@ -208,3 +208,5 @@ export const NavBar = () => {
     </div>
   );
 };
+
+export default NavBar
