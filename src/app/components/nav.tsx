@@ -180,8 +180,10 @@ export const NavBar = () => {
                 scrollToSection(navItem.id);
               }}
               key={navItem.id}
-              className={`text-white text-md font-medium cursor-pointer hover:text-gray-400 ${
-                activeSection === navItem.id ? "text-gray-400" : ""
+              className={`relative text-white text-md font-medium cursor-pointer hover:text-gray-400 p-2 transition-colors after:content-[''] after:absolute after:bottom-[-7.5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#126cf8] after:transition-[width] after:duration-300 ${
+                activeSection === navItem.id
+                  ? "after:w-full text-gray-400"
+                  : "hover:after:w-full"
               }`}
             >
               {navItem.label}
