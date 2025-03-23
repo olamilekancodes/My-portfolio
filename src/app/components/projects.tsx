@@ -19,7 +19,7 @@ const projects = [
     id: 2,
     name: "Organogram Workspace",
     description:
-      "Oloja is a B2C marketplace that connects buyers and customers to sellers and service providers in Australia. It offers a wide range of products such as electronics, fashion items, baby sitting, plumbing, etc. The platform is built with a focus on user experience and performance, ensuring that users can easily find and purchase products they love.",
+      "Organogram Workspace is an all-in-one SaaS platform designed to streamline business operations by integrating multiple HR, payroll, and performance management tools into a single, unified workspace. It caters to organizations of all sizes, offering specialized apps that enhance workforce management, automate payroll processing, and improve employee performance tracking.",
     image: "/Images/workspace.jpg",
     tools: ["React JS", "Typescript", "Material UI", "Redux", "React Query"],
     link: "https://workspace.organogram.ltd/",
@@ -28,7 +28,7 @@ const projects = [
     id: 3,
     name: "Workspace HR",
     description:
-      "Oloja is a B2C marketplace that connects buyers and customers to sellers and service providers in Australia. It offers a wide range of products such as electronics, fashion items, baby sitting, plumbing, etc. The platform is built with a focus on user experience and performance, ensuring that users can easily find and purchase products they love.",
+      "The Workspace HR App in Organogram Workspace is a powerful, cloud-based solution designed to simplify and automate human resource management. It provides businesses with an all-in-one platform to manage employee data, track attendance, oversee performance, and enhance the overall employee experience.",
     image: "/Images/hr.jpg",
     tools: [
       "React JS",
@@ -45,7 +45,7 @@ const projects = [
     id: 4,
     name: "Workspace Payroll",
     description:
-      "Oloja is a B2C marketplace that connects buyers and customers to sellers and service providers in Australia. It offers a wide range of products such as electronics, fashion items, baby sitting, plumbing, etc. The platform is built with a focus on user experience and performance, ensuring that users can easily find and purchase products they love.",
+      "The Workspace Payroll App is a powerful, automated payroll processing solution designed to simplify salary calculations, tax deductions, and compliance reporting. It ensures accurate, timely payments while reducing administrative workload, making it the perfect payroll management tool for businesses of all sizes.",
     image: "/Images/payroll.jpg",
     tools: [
       "React JS",
