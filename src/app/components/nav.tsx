@@ -99,15 +99,13 @@ const NavBar = () => {
         onClick={scrollToSection.bind(this, "home")}
       >
         <div className="flex flex-row items-end gap-1 ">
-          <div className="md:w-12 md:h-12 w-10 h-10 overflow-hidden rounded-full flex items-center justify-center border-4 border-white">
-            <Image
-              src="/Images/nav-image.jpg"
-              alt="Nav Image"
-              width={70}
-              height={70}
-              className="rounded-full object-cover"
-            />
-          </div>
+          <Image
+            src="/Images/ellipse.png"
+            alt="Nav Image"
+            width={50}
+            height={50}
+          />
+
           <p className="itim font-medium md:text-[1.9rem] text-[1.4rem]">
             lamilekan
           </p>
