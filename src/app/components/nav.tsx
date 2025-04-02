@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -92,18 +93,23 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const mobileNavVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3  bg-[#0808088e] ">
       <div
         className="relative inline-block p-1 cursor-pointer after:content-[''] after:absolute after:bottom-[0.6rem] after:right-[-6px] after:w-0 after:h-0 after:bg-[#126cf8] after:rounded-full after:transition-all after:duration-500 md:hover:after:w-2 md:hover:after:h-2 hover:after:h-1 hover:after:w-1"
         onClick={scrollToSection.bind(this, "home")}
       >
-        <div className="flex flex-row items-end gap-1 ">
+        <div className="flex gap-1 items-center">
           <Image
             src="/Images/ellipse.png"
             alt="Nav Image"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
           />
 
           <p className="itim font-medium md:text-[1.9rem] text-[1.4rem]">
@@ -155,11 +161,13 @@ const NavBar = () => {
         </a>
       </div>
 
-      <div
+      <motion.div
         ref={sidebarRef}
         className={`fixed top-0 right-0 h-full w-1/2 bg-[#080808] shadow-lg transform ${
           openSideBar ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-[10] lg:hidden`}
+        initial="hidden"
+        animate={openSideBar ? "visible" : "hidden"}
       >
         <div className="flex justify-end my-6 p-2 mr-1">
           <AiOutlineClose
@@ -170,22 +178,28 @@ const NavBar = () => {
         </div>
 
         <div className="flex flex-col items-center mt-10 gap-6">
-          {navItems.map((navItem) => (
-            <Link
-              href={`#${navItem.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(navItem.id);
-              }}
+          {navItems.map((navItem, index) => (
+            <motion.div
               key={navItem.id}
-              className={`relative text-white text-md font-medium cursor-pointer hover:text-gray-400 p-2 transition-colors after:content-[''] after:absolute after:bottom-[-7.5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#126cf8] after:transition-[width] after:duration-300 ${
-                activeSection === navItem.id
-                  ? "after:w-full text-gray-400"
-                  : "hover:after:w-full"
-              }`}
+              variants={mobileNavVariants}
+              custom={index}
             >
-              {navItem.label}
-            </Link>
+              <Link
+                href={`#${navItem.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(navItem.id);
+                }}
+                // key={navItem.id}
+                className={`relative text-white text-md font-medium cursor-pointer hover:text-gray-400 p-2 transition-colors after:content-[''] after:absolute after:bottom-[-7.5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#126cf8] after:transition-[width] after:duration-300 ${
+                  activeSection === navItem.id
+                    ? "after:w-full text-gray-400"
+                    : "hover:after:w-full"
+                }`}
+              >
+                {navItem.label}
+              </Link>
+            </motion.div>
           ))}
 
           <a
@@ -202,7 +216,7 @@ const NavBar = () => {
             Resume
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

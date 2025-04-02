@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
 const skills = [
   "Next.js",
@@ -15,6 +19,37 @@ const skills = [
   "Bootstrap",
 ];
 
+const skillVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.1,
+      duration: 0.5,
+      type: "spring",
+      stiffness: 100,
+    },
+  }),
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const MotionSpan = dynamic(
+  () => import("framer-motion").then((mod) => mod.motion.span),
+  { ssr: false }
+);
+
 const AboutModule = () => {
   return (
     <div
@@ -30,7 +65,13 @@ const AboutModule = () => {
           className="w-[100px]"
         />
 
-        <div className="flex flex-col gap-5 my-10">
+        <motion.div
+          className="flex flex-col gap-5 my-10"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <h2 className="itim text-white">
             "I build experiences, not just interfaces"
           </h2>
@@ -60,7 +101,7 @@ const AboutModule = () => {
             And as I keep moving forward, I’m excited to keep building
             experiences that people love and trust.
           </p>
-        </div>
+        </motion.div>
 
         <Image
           src="/Images/vectors.png"
@@ -77,15 +118,20 @@ const AboutModule = () => {
         <div className="relative w-full flex flex-wrap gap-5 p-4">
           {skills.map((skill, index) => {
             return (
-              <span
+              <MotionSpan
                 key={index}
                 className="px-4 py-2 text-black md:text-sm text-[12px] rounded-2xl font-medium shadow-lg"
                 style={{
                   backgroundColor: `hsl(${Math.random() * 360}, 70%, 70%)`,
                 }}
+                variants={skillVariants}
+                initial="hidden"
+                whileInView="visible"
+                custom={index}
+                viewport={{ once: true }}
               >
                 {skill}
-              </span>
+              </MotionSpan>
             );
           })}
         </div>
