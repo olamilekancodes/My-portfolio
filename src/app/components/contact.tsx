@@ -22,6 +22,24 @@ const Contact = () => {
     }
   }, [state, reset]);
 
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const nameInput = form.elements.namedItem("name") as HTMLInputElement;
+    const emailInput = form.elements.namedItem("email") as HTMLInputElement;
+    const messageInput = form.elements.namedItem(
+      "message"
+    ) as HTMLTextAreaElement;
+
+    if (!nameInput.value || !emailInput.value || !messageInput.value) {
+      toast.error("All fields are required");
+      return;
+    }
+
+    await handleSubmit(event);
+  };
+
   return (
     <div
       id="contact"
@@ -31,10 +49,7 @@ const Contact = () => {
         Send me a message!
       </h1>
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-12 w-full my-5"
-      >
+      <form onSubmit={onSubmit} className="flex flex-col gap-12 w-full my-5">
         <div
           className="flex gap-12 flex-col md:flex-row
         "
