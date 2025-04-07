@@ -150,7 +150,7 @@ const NavBar = () => {
           onClick={() => {
             setOpenSideBar(false);
             window.open(
-              "https://drive.google.com/file/d/1cOPe_2n4pRmPd3N76WoaWF-2CfNyVVjL/view?usp=sharing",
+              "https://drive.google.com/file/d/1_w9vNljNC78JvUcbtZ2P36uwAE-W5erZ/view?usp=sharing",
               "_blank"
             );
           }}
@@ -206,7 +206,7 @@ const NavBar = () => {
             onClick={() => {
               setOpenSideBar(false);
               window.open(
-                "https://drive.google.com/file/d/1cOPe_2n4pRmPd3N76WoaWF-2CfNyVVjL/view?usp=sharing",
+                "https://drive.google.com/file/d/1_w9vNljNC78JvUcbtZ2P36uwAE-W5erZ/view?usp=sharing",
                 "_blank"
               );
             }}
