@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Itim } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import "./globals.css";
 
@@ -13,11 +13,6 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const itim = Itim({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-itim",
-});
 
 export const metadata: Metadata = {
   title: "Olamilekan Akanni's Portfolio",
@@ -32,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${itim.variable} antialiased bg-[#080808]`}
-      >
+      <body className={`${inter.variable} antialiased bg-[#fff]`}>
         <Toaster position="top-right" richColors />
         <NavBar />
         <main className="flex-grow">{children}</main>
