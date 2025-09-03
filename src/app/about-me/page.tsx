@@ -52,10 +52,7 @@ const MotionSpan = dynamic(
 
 const AboutModule = () => {
   return (
-    <div
-      id="about"
-      className="flex flex-col md:flex-row justify-between items-center   text-[#d8d8d8] gap-20 md:gap-0 my-10"
-    >
+    <div className="flex flex-col md:flex-row justify-between items-center   text-[#d8d8d8] gap-20 md:gap-0 my-10">
       <div className=" w-full md:w-3/6 flex flex-col">
         <Image
           src="/Images/vectors.png"

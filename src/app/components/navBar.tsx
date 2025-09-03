@@ -9,18 +9,31 @@ import { motion } from "framer-motion";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 
 import { MessageButton } from "../shared/Button";
+import { usePathname } from "next/navigation";
 
 const navItems = [
-  { id: "home", label: "Home" },
-  { id: "projects", label: "Projects" },
-  { id: "about_me", label: "About Me" },
+  { id: "home", label: "Home", link: "/" },
+  { id: "projects", label: "Projects", link: "/projects" },
+  { id: "about_me", label: "About Me", link: "/about-me" },
 ];
 
+const mobileNavVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const NavBar = () => {
+  const pathname = usePathname();
+
   const [openSideBar, setOpenSideBar] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const [activeSection, setActiveSection] = useState<string>("");
+  console.log("activeSection: ", activeSection);
 
   const sidebarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setActiveSection(pathname);
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -40,39 +53,6 @@ const NavBar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [openSideBar]);
-
-  const scrollToSection = (id: string) => {
-    setOpenSideBar(false);
-    setActiveSection(id);
-
-    const element = document.getElementById(id);
-    if (!element) return;
-
-    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
-    const startPosition = window.scrollY;
-    const distance = targetPosition - startPosition;
-    const duration = 900;
-    let startTime: number | null = null;
-
-    const animateScroll = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-
-      const easeInOutCubic =
-        progress < 0.5
-          ? 4 * progress ** 3
-          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-
-      window.scrollTo(0, startPosition + distance * easeInOutCubic);
-
-      if (elapsedTime < duration) {
-        requestAnimationFrame(animateScroll);
-      }
-    };
-
-    requestAnimationFrame(animateScroll);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,16 +75,13 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const mobileNavVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3  bg-[#fff] ">
       <motion.div
         className="flex p-2 cursor-pointer items-end"
-        onClick={scrollToSection.bind(this, "home")}
+        onClick={() => {
+          setOpenSideBar(false);
+        }}
         whileHover="hover"
         initial="rest"
       >
@@ -144,16 +121,13 @@ const NavBar = () => {
       <div className="hidden lg:flex flex-row justify-center items-center gap-10">
         {navItems.map((navItem, index) => (
           <Link
-            href={`#${navItem.id}`}
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection(navItem.id);
-            }}
+            href={navItem.link}
+            onClick={() => setActiveSection(navItem.link)}
             key={index}
-            className={`font-medium md:text-sm lg:text-base cursor-pointer p-2 transition-colors hover:text-[#a475d9] ${
-              activeSection === navItem.id
-                ? "text-[#a475d9]"
-                : "text-[#7f828b] transition-colors duration-500"
+            className={`font-medium md:text-sm lg:text-base cursor-pointer p-2 transition-colors hover:text-[#6605e3] ${
+              activeSection === navItem.link
+                ? "text-[#6605e3]"
+                : "text-[#7f828b] transition-colors duration-300"
             }`}
           >
             {navItem.label}
@@ -161,12 +135,15 @@ const NavBar = () => {
         ))}
       </div>
 
-      <div className="hidden lg:flex p-1 justify-center items-center cursor-pointer rotate-12 hover:text-[#a475d9] transition-colors duration-500">
+      <Link
+        href={"/contact"}
+        className="hidden lg:flex p-1 justify-center items-center cursor-pointer rotate-12 transition-colors duration-500"
+      >
         <BiMessageRoundedDetail
-          className="bg-[#37373C] p-1 rounded-full"
+          className="bg-[#222] p-1 rounded-full hover:bg-[#4c4c4c]"
           size={40}
         />
-      </div>
+      </Link>
 
       <motion.div
         ref={sidebarRef}
@@ -188,15 +165,15 @@ const NavBar = () => {
           {navItems.map((navItem, index) => (
             <motion.div key={index} variants={mobileNavVariants} custom={index}>
               <Link
-                href={`#${navItem.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(navItem.id);
+                href={navItem.link}
+                onClick={() => {
+                  setOpenSideBar(false);
+                  setActiveSection(navItem.link);
                 }}
-                className={`font-medium cursor-pointer p-2 transition-colors hover:text-[#a475d9] text-xs md:text-sm ${
-                  activeSection === navItem.id
-                    ? "text-[#a475d9]"
-                    : "text-[#7f828b] transition-colors duration-500"
+                className={`font-medium cursor-pointer p-2 transition-colors hover:text-[#6605e3] text-xs md:text-sm ${
+                  activeSection === navItem.link
+                    ? "text-[#6605e3]"
+                    : "text-[#7f828b] transition-colors duration-300"
                 }`}
               >
                 {navItem.label}
@@ -204,7 +181,7 @@ const NavBar = () => {
             </motion.div>
           ))}
 
-          <MessageButton />
+          <MessageButton action={() => setOpenSideBar(false)} />
         </div>
       </motion.div>
     </div>

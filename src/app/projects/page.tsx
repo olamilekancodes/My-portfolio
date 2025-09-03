@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
+import { PageTitle } from "../shared/PageTitle";
 
 const projects = [
   {
@@ -73,18 +74,26 @@ const Projects = () => {
   const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col gap-10 my-20 text-white" id="projects">
-      <h1 className="itim">Recent projects</h1>
-      {projects.map((project) => (
-        <motion.a
+    <div className="mt-0 xl">
+      <PageTitle
+        title={
+          <>
+            My <span className="text-[#6e06f2]">Recent</span> Projects
+          </>
+        }
+        paragraph="Here my recent projects; focusing on clean design, responsiveness, interactive user experience with smooth animations and reusable components to deliver modern experiences."
+      />
+
+      {/* {projects.map((project) => (
+        <a
           href={project.link}
           key={project.id}
           target="_blank"
           rel="noopener noreferrer"
-          variants={projectVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          // variants={projectVariants}
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ once: true }}
         >
           <div
             className={`flex md:flex-row flex-col gap-5 p-7 cursor-pointer transition-colors duration-300 rounded-lg border-b-2 ${
@@ -138,8 +147,8 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </motion.a>
-      ))}
+        </a>
+      ))} */}
     </div>
   );
 };
