@@ -27,7 +27,6 @@ const NavBar = () => {
 
   const [openSideBar, setOpenSideBar] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
-  console.log("activeSection: ", activeSection);
 
   const sidebarRef = useRef<HTMLDivElement | null>(null);
 
@@ -53,27 +52,6 @@ const NavBar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [openSideBar]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      let currentSection = "home";
-
-      for (const navItem of navItems) {
-        const element = document.getElementById(navItem.id);
-        if (element) {
-          const elementTop = element.offsetTop - 100;
-          if (scrollPosition >= elementTop) {
-            currentSection = navItem.id;
-          }
-        }
-      }
-      setActiveSection(currentSection);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3  bg-[#fff] ">

@@ -42,7 +42,7 @@ const Contact = () => {
 
   return (
     <div
-      id="contact"
+  
       className=" flex items-center justify-center flex-col text-white my-10 gap-20 w-full md:px-10 px-0 py-20"
     >
       <h1 className="mt-10 text-lg md:text-3xl font-medium">

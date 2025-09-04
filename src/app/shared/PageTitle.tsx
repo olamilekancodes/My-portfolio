@@ -11,7 +11,7 @@ export const PageTitle = ({ title, paragraph }: Props) => {
     <div className="flex flex-col gap-8 md:gap-10 ">
       <Title>{title}</Title>
 
-      <Paragraph className="max-w-2xl">{paragraph}</Paragraph>
+      <Paragraph className="max-w-[45rem]">{paragraph}</Paragraph>
     </div>
   );
 };

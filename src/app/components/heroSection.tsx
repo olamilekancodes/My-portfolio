@@ -5,7 +5,7 @@ import { Paragraph, Title } from "../shared/Typography";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between justify-start items-start py-10 mt-0 xl:mt-10 gap-15 md:gap-0">
+    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between justify-start items-start mt-0 xl:mt-10 py-10 border border-red-500 gap-15 md:gap-0 ">
       <div className="flex flex-col lg:basis-1/2 w-full gap-4 md:gap-7 lg:gap-10 justify-center text-[#37373C]  mb-20 lg:mb-0">
         <p className="text-[1.5rem] font-medium">Hey, I'm Olamilekan</p>
         <div className="flex flex-col gap-4 md:gap-10 lg:gap-12">
