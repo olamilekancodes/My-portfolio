@@ -54,7 +54,7 @@ const NavBar = () => {
   }, [openSideBar]);
 
   return (
-    <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 z-10 py-5 md:px-10 px-3  bg-[#fff] ">
+    <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 py-5 shadow-sm md:px-10 px-3  bg-[#fff] z-50">
       <motion.div
         className="flex p-2 cursor-pointer items-end"
         onClick={() => {

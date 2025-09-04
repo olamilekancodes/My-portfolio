@@ -8,7 +8,7 @@ interface Props {
 
 export const PageTitle = ({ title, paragraph }: Props) => {
   return (
-    <div className="flex flex-col gap-8 md:gap-10 ">
+    <div className="flex flex-col gap-8 md:gap-10">
       <Title>{title}</Title>
 
       <Paragraph className="max-w-[45rem]">{paragraph}</Paragraph>

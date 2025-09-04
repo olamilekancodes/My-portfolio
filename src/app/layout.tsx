@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased bg-[#fff]`}>
+      <body
+        className={`${poppins.variable} antialiased bg-[#fff] min-h-screen flex flex-col`}
+      >
         <Toaster position="top-right" richColors />
         <NavBar />
         <main className="flex-grow">

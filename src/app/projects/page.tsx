@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
+
 import { PageTitle } from "../shared/PageTitle";
 import Link from "next/link";
 
@@ -46,6 +46,26 @@ const projects = [
   },
 ];
 
+// Variants
+const imageVariant = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const textContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const textItem = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const Projects = () => {
   return (
     <div className="py-10 mt-0 xl:mt-10">
@@ -60,40 +80,56 @@ const Projects = () => {
 
       <div className="my-20 flex flex-col lg:flex-row flex-wrap gap-10 items-center justify-center">
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.id}
             className="relative xs:w-[90%] sm:w-[80%] md:w-[70%] lg:w-[45%] max-h-[35rem] bg-cover bg-center flex flex-col items-center justify-between p-5 md:p-10 mx-auto rounded-xl"
             style={{
               backgroundImage: `url(${project.bgImage})`,
             }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={800}
-              height={300}
-              className="z-10 object-cover rounded-lg"
-            />
+            <motion.div variants={imageVariant}>
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={800}
+                height={300}
+                className="z-10 object-cover rounded-lg"
+              />
+            </motion.div>
 
-            <div className="flex flex-col items-start gap-3 z-10 self-start mt-4">
-              <h1 className="text-2xl md:text-3xl font-bold text-white">
-                {project.title}
-              </h1>
-
-              <p className="text-[#f9f9f9] text-xs md:text-sm">
-                {project.description}
-              </p>
-
-              <Link
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 text-[10px] md:text-xs flex items-center gap-1 text-[#6e06f2] hover:underline"
+            <motion.div
+              variants={textContainer}
+              className="flex flex-col items-start gap-3 z-10 self-start mt-4"
+            >
+              <motion.h1
+                variants={textItem}
+                className="text-2xl md:text-3xl font-bold text-white"
               >
-                View link <GoArrowUpRight />
-              </Link>
-            </div>
-          </div>
+                {project.title}
+              </motion.h1>
+
+              <motion.p
+                variants={textItem}
+                className="text-[#f9f9f9] text-xs md:text-sm"
+              >
+                {project.description}
+              </motion.p>
+
+              <motion.div variants={textItem}>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-[10px] md:text-xs flex items-center gap-1 text-[#6e06f2] hover:underline"
+                >
+                  View link <GoArrowUpRight />
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>
