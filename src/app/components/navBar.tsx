@@ -7,9 +7,9 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BiMessageRoundedDetail } from "react-icons/bi";
+import { usePathname, useRouter } from "next/navigation";
 
 import { MessageButton } from "../shared/Button";
-import { usePathname } from "next/navigation";
 
 const navItems = [
   { id: "home", label: "Home", link: "/" },
@@ -24,6 +24,7 @@ const mobileNavVariants = {
 
 const NavBar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const [openSideBar, setOpenSideBar] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
@@ -161,7 +162,13 @@ const NavBar = () => {
             </motion.div>
           ))}
 
-          <MessageButton action={() => setOpenSideBar(false)} />
+          <MessageButton
+            title="Get In Touch"
+            action={() => {
+              setOpenSideBar(false);
+              router.push("/contact");
+            }}
+          />
         </div>
       </motion.div>
     </div>

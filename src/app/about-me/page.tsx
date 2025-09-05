@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { PageTitle } from "../shared/PageTitle";
 import { Paragraph } from "../shared/Typography";
 import EnhancedSectionTitle from "../shared/EnhancedSectionTitle";
-import Banner from "./banner";
+import Banner from "./components/banner";
+import MyStory from "./components/myStory";
 
 const skills = [
   {
@@ -38,7 +39,7 @@ const skills = [
   },
   {
     title: "Low Code",
-    list: ["Webflow", "Bubble (Basic)"],
+    list: ["Webflow", "Basic Knowledge of Bubble"],
   },
   {
     title: "Soft Skill",
@@ -86,7 +87,7 @@ const AboutModule = () => {
             <span className="text-[#6e06f2]">About</span> Me
           </>
         }
-        paragraph="Crafting seamless and visually engaging user experiences is my passion. As a frontend developer, I put my creativity and attention to detail into every project, turning ideas into responsive and functional websites amd applications."
+        paragraph="Crafting seamless and visually engaging user experiences is my passion. As a frontend developer, I put my creativity and attention to detail into every project, turning ideas into responsive and functional websites and applications."
       />
 
       <Banner />
@@ -100,34 +101,7 @@ const AboutModule = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="flex flex-col gap-2"
           >
-            <Paragraph>
-              My journey as a frontend developer began in 2020, during the
-              COVID-19 lockdown. With the world on pause, I saw the stay-at-home
-              curfew as an opportunity to invest in myself, so I dived into
-              online classes on web development. What started as curiosity
-              quickly grew into passion, and I became a self-taught developer.
-            </Paragraph>
-            <Paragraph>
-              After the pandemic era, I landed my first internship at Adeoye
-              Orimoloye & Co, where I worked on the law firm’s website. That
-              experience opened doors for me, and shortly after, I joined Sync
-              Skill, a Nigerian-Australian tech company. There, I contributed to
-              a B2C web application and successfully implemented a Stripe
-              payment gateway, gaining valuable hands-on experience with
-              real-world product challenges.
-            </Paragraph>
-            <Paragraph>
-              I currently work at Organogram, a enterprise solutions company
-              building HR, payroll, and employee performance applications for
-              organizations of different sizes. Each step of this journey has
-              sharpened my skills and deepened my love for creating seamless,
-              impactful user experiences.
-            </Paragraph>
-            <Paragraph>
-              Looking ahead, I aspire to work on projects that cross continents,
-              building digital solutions that connect people from different
-              places and make the world feel just a little closer.
-            </Paragraph>
+            <MyStory />
           </motion.div>
         </EnhancedSectionTitle>
 

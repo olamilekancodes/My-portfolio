@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
-import { Paragraph } from "../shared/Typography";
+import { Paragraph } from "../../shared/Typography";
 
 const banner = [
   {
@@ -95,7 +95,7 @@ const BannerRow = ({ row, direction }: { row: any; direction: number }) => {
 
 const Banner = () => {
   return (
-    <div className="bg-[#B8B8B8] w-full h-[17rem] lg:h-[20rem] py-8 lg:py-10 flex flex-col justify-between items-start my-16 lg:my-20 rounded-xl">
+    <div className="bg-[#B8B8B8] w-full py-8 lg:py-10 flex flex-col justify-between gap-4 md:gap-6 items-start my-16 lg:my-20 rounded-xl overflow-hidden">
       {banner.map((row, index) => {
         const direction = index === 1 ? -1 : 1;
         return <BannerRow key={row.id} row={row} direction={direction} />;

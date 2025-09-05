@@ -7,11 +7,11 @@ interface Props {
 
 const EnhancedHomepageSectionTitle = ({ children, title }: Props) => {
   return (
-    <div className="flex flex-col gap-2 md:gap-4 lg:gap-6">
+    <div className="flex flex-col md:gap-4 lg:gap-6">
       <HomepageSectionTitle>{title}</HomepageSectionTitle>
       <div>{children}</div>
     </div>
   );
 };
 
-export default EnhancedSectionTitle;
+export default EnhancedHomepageSectionTitle;

@@ -1,18 +1,20 @@
 import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
 
-interface MessageButtonProps {
+interface ButtonProps {
   action?: () => void;
+  title: string;
 }
 
-export const MessageButton = ({ action }: MessageButtonProps) => {
+export const MessageButton = ({ action, title }: ButtonProps) => {
   return (
-    <Link
-      href="/contact"
-      className="p-4 rounded-lg bg-[#7812ff] text-xs lg:text-[1rem] text-[#fff] hover:bg-[#6006d5]  font-medium transition-colors duration-300"
+    <button
+      type="button"
       onClick={action}
+      className="p-4 rounded-lg bg-[#7812ff] text-xs lg:text-[1rem] text-[#fff] hover:bg-[#6006d5]  font-medium transition-colors duration-300"
     >
-      Get In Touch
-    </Link>
+      {title}
+    </button>
   );
 };
 
@@ -24,5 +26,17 @@ export const ResumeButton = () => {
     >
       Resume
     </Link>
+  );
+};
+
+export const PageNavigationButton = ({ action, title }: ButtonProps) => {
+  return (
+    <button
+      className="text-[1rem] lg:text-[1.25rem] flex items-center gap-1 text-[#6e06f2] font-medium hover:underline transition-all duration-300"
+      onClick={action}
+      type="button"
+    >
+      {title} <GoArrowRight />
+    </button>
   );
 };
