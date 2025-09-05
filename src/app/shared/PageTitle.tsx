@@ -3,7 +3,7 @@ import { Title, Paragraph } from "./Typography";
 
 interface Props {
   title: ReactNode;
-  paragraph: string;
+  paragraph: ReactNode;
 }
 
 export const PageTitle = ({ title, paragraph }: Props) => {
