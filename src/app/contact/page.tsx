@@ -138,7 +138,7 @@ const Contact = () => {
             {state.submitting ? (
               <div className="w-full md:w-auto py-4 rounded-lg bg-[#6006d5] px-[3.2rem] lg:px-[4.2rem] flex justify-center items-center">
                 <Image
-                  src="/Images/loader2.svg"
+                  src="/Images/loader.svg"
                   alt="loader"
                   width={18}
                   height={18}

@@ -118,7 +118,9 @@ const NavBar = () => {
         className="hidden lg:flex p-1 justify-center items-center cursor-pointer rotate-12 transition-colors duration-500"
       >
         <BiMessageRoundedDetail
-          className="bg-[#222] p-1 rounded-full hover:bg-[#4c4c4c]"
+          className={`bg-[#222] p-1 rounded-full hover:bg-[#4c4c4c] ${
+            activeSection === "/contact" ? "text-[#6605e3]" : "text-white"
+          }`}
           size={40}
         />
       </Link>

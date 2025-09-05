@@ -1,12 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import { PageTitle } from "../shared/PageTitle";
 import { Paragraph } from "../shared/Typography";
 import EnhancedSectionTitle from "../shared/EnhancedSectionTitle";
-import { useEffect, useRef, useState } from "react";
 import Banner from "./banner";
 
 const skills = [
@@ -26,16 +24,16 @@ const skills = [
       "Redux",
       "React Query",
       "Shadcn",
-      "Styled-components",
+      "Styled-Components",
       "Sass/SCSS",
       "Bootstrap",
       "REST APIs",
-      "JSON & data manipulation",
+      "JSON & Data Manipulation",
       "Code Optimization",
-      "Caching strategies",
+      "Caching Strategies",
       "Git/GitHub",
       "Responsiveness",
-      "Basic knowledge of backend",
+      "Basic Knowledge of Backend",
     ],
   },
   {
@@ -45,12 +43,12 @@ const skills = [
   {
     title: "Soft Skill",
     list: [
-      "Problem-solving & Debugging",
+      "Problem-Solving & Debugging",
       "Effective Communication",
       "Leadership",
       "Commitment",
       "Collaboration",
-      "Attention to detail",
+      "Attention to Detail",
     ],
   },
 ];
@@ -60,7 +58,7 @@ const fadeInVariant = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import Image from "next/image";
 
 import { Paragraph } from "../shared/Typography";
 
@@ -12,9 +11,9 @@ const banner = [
     list: [
       "JSON & data manipulation",
       "Code Optimization",
-      "Caching strategies",
+      "Caching Strategies",
       "Git/GitHub",
-      "Styled-components",
+      "Styled-Components",
       "Sass/SCSS",
       "Bootstrap",
       "REST APIs",
@@ -38,7 +37,7 @@ const banner = [
     id: 3,
     list: [
       "Webflow",
-      "Problem-solving & Debugging",
+      "Problem-Solving & Debugging",
       "Effective Communication",
       "Leadership",
       "Commitment",
@@ -76,15 +75,6 @@ const BannerRow = ({ row, direction }: { row: any; direction: number }) => {
           ease: "linear",
         }}
       >
-        {/* {row.list.map((item: string, i: number) => (
-          <Paragraph
-            key={`${row.id}-${i}`}
-            className="px-4 py-1 bg-[#222] text-white rounded-xl"
-          >
-            {item}
-          </Paragraph>
-        ))} */}
-
         {row.list.map((item: string, i: number) => (
           <div key={`${row.id}-${i}`} className="flex items-center">
             <Paragraph className="px-4 py-1 bg-[#222] text-white rounded-xl">
@@ -92,15 +82,9 @@ const BannerRow = ({ row, direction }: { row: any; direction: number }) => {
             </Paragraph>
 
             {i < row.list.length - 1 && (
-            
-                <Image
-                src="/Images/star.png"
-                alt="star"
-                width={20}
-                height={20}
-                className="object-contain"
-              />
-     
+              <span className="text-3xl mt-3 md:mt-4 lg:mt-5 mx-2 text-[#6e06f2]">
+                •
+              </span>
             )}
           </div>
         ))}
@@ -111,7 +95,7 @@ const BannerRow = ({ row, direction }: { row: any; direction: number }) => {
 
 const Banner = () => {
   return (
-    <div className="bg-[#B8B8B8] w-full h-[20rem] py-10 flex flex-col justify-between items-start my-20 rounded-xl">
+    <div className="bg-[#B8B8B8] w-full h-[17rem] lg:h-[20rem] py-8 lg:py-10 flex flex-col justify-between items-start my-16 lg:my-20 rounded-xl">
       {banner.map((row, index) => {
         const direction = index === 1 ? -1 : 1;
         return <BannerRow key={row.id} row={row} direction={direction} />;

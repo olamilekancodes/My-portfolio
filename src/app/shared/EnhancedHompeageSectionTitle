@@ -1,0 +1,17 @@
+import { HomepageSectionTitle } from "./Typography";
+
+interface Props {
+  children: React.ReactNode;
+  title: string;
+}
+
+const EnhancedHomepageSectionTitle = ({ children, title }: Props) => {
+  return (
+    <div className="flex flex-col gap-2 md:gap-4 lg:gap-6">
+      <HomepageSectionTitle>{title}</HomepageSectionTitle>
+      <div>{children}</div>
+    </div>
+  );
+};
+
+export default EnhancedSectionTitle;

@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/appraisal/[appraisalID]/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/appraisal/[appraisalID]/page.tsx", "src/app/shared/EnhancedHompeageSectionTitle"],
   "exclude": ["node_modules"]
 }
