@@ -2,18 +2,55 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 import { MessageButton, ResumeButton } from "../shared/Button";
 import { Paragraph } from "../shared/Typography";
+import { useEffect, useState } from "react";
+
+interface TypewriterProps {
+  text: string;
+  speed?: number;
+  className?: string;
+}
+
+const Typewriter = ({ text, speed = 100, className = "" }: TypewriterProps) => {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      i++;
+      if (i <= text.length) {
+        setDisplayedText(text.slice(0, i));
+      } else {
+        clearInterval(interval);
+      }
+    }, speed);
+
+    return () => clearInterval(interval);
+  }, [text, speed]);
+  return (
+    <h1 className={`text-[1rem] md:text-[1.5rem] font-medium ${className}`}>
+      {displayedText}
+      <motion.span
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ repeat: Infinity, duration: 1 }}
+        className="inline-block"
+      >
+        |
+      </motion.span>
+    </h1>
+  );
+};
 
 const HeroSection = () => {
   const router = useRouter();
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between justify-start items-start mt-0 xl:mt-10 py-10 gap-15 md:gap-0 ">
       <div className="flex flex-col lg:basis-1/2 w-full justify-center text-[#37373C]  mb-20 lg:mb-0">
-        <p className="text-[1rem] md:text-[1.5rem] font-medium">
-          Hey, I'm Olamilekan Akanni
-        </p>
+        <Typewriter text="Hey, I'm Olamilekan Akanni" className="text-[#222]" />
+
         <div className="flex flex-col text-[#222] my-3">
           <div className="flex items-center">
             <h1 className="text-[3rem] sm:text-[4rem] md:text-[5.5rem] xl:text-[6.25rem] font-bold text-[#6e06f2] leading-none">
