@@ -1,26 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Itim } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import "./globals.css";
 
 import { Toaster } from "sonner";
-import NavBar from "./components/nav";
 import FooterModule from "./components/footer";
+import NavBar from "./components/navBar";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-});
-
-const itim = Itim({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-itim",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
-  title: "Olamilekan Akanni's Portfolio",
+  title: "Olamilekan's Portfolio",
   description: "Welcome to my portfolio",
   icons: "/favicon.ico",
 };
@@ -33,11 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${itim.variable} antialiased bg-[#080808]`}
+        className={`${poppins.variable} antialiased bg-[#fff] min-h-screen flex flex-col`}
       >
         <Toaster position="top-right" richColors />
         <NavBar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow">
+          <div className="m-auto max-w-6xl px-5 flex flex-col gap-10 my-20">
+            {children}
+          </div>
+        </main>
         <FooterModule />
       </body>
     </html>
