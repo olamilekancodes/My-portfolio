@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import ProjectListings from "../projects/list";
 import { PageNavigationButton } from "../shared/Button";
 import EnhancedHomepageSectionTitle from "../shared/EnhancedHomepageSectionTitle";
-import Banner from "../about-me/components/banner";
 import MyStory from "../about-me/components/myStory";
 
 const HomepageSections = () => {
@@ -29,7 +28,7 @@ const HomepageSections = () => {
 
       <EnhancedHomepageSectionTitle title="My Profile">
         <div className="mt-10">
-          <div className="h-[18rem] md:h-[25rem] flex md:gap-10 gap-5 relative overflow-y-hidden w-full overflow-hidden">
+          <div className="h-[20rem] md:h-[30rem] flex md:gap-10 gap-5 relative overflow-y-hidden w-full overflow-hidden">
             <div className="flex w-20 h-full bg-[#6e06f2] " />
             <div>
               <MyStory />

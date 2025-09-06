@@ -2,7 +2,7 @@
 
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
-import { useState } from "react";
+
 const socials = [
   {
     id: "LinkedIn",

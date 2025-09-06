@@ -67,7 +67,7 @@ const HeroSection = () => {
 
         <Paragraph>
           I’m a passionate frontend developer who specializes in building
-          amazing, responsive and user-friendly websites and applicationss
+          amazing, responsive and user-friendly websites and applications
         </Paragraph>
 
         <div className="flex gap-4 items-center mt-5 md:mt-8">
@@ -91,7 +91,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
-      </div>
+      </div>git
     </div>
   );
 };

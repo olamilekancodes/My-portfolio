@@ -12,11 +12,16 @@ const MyStory = () => {
       </Paragraph>
       <Paragraph>
         After the pandemic era, I landed my first internship at Adeoye Orimoloye
-        & Co, where I worked on the law firm’s website. That experience opened
-        doors for me, and shortly after, I joined Sync Skill, a
-        Nigerian-Australian tech company. There, I contributed to a B2C web
-        application and successfully implemented the Stripe payment gateway,
-        gaining valuable hands-on experience with real-world product challenges.
+        & Co, where I worked on the law firm’s website using Webflow. Shorlty
+        after, I transitioned to a role at a digital agency, where I started
+        gaining real life experience in writing codes. That experience opened
+        doors for me.
+      </Paragraph>
+      <Paragraph>
+        Later, I joined Sync Skill, a Nigerian-Australian tech company. There, I
+        contributed to a B2C web application and successfully implemented the
+        Stripe payment gateway, gaining valuable hands-on experience with
+        real-world product challenges.
       </Paragraph>
       <Paragraph>
         I currently work at Organogram, an enterprise solutions company building
