@@ -91,7 +91,7 @@ const NavBar = () => {
       </motion.div>
 
       <div
-        className="lg:hidden cursor-pointer text-[#37373C]"
+        className="lg:hidden cursor-pointer text-[#37373C] mr-2"
         onClick={() => setOpenSideBar(true)}
       >
         <FaBars size={20} />

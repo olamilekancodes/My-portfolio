@@ -91,7 +91,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
-      </div>git
+      </div>
     </div>
   );
 };
