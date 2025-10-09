@@ -25,8 +25,8 @@ const socials = [
 
 const FooterModule = () => {
   return (
-    <div className="  my-5 md:my-7 lg:my-10 text-[#9c9ea4] border-t-2 border-[#6d7078]">
-      <div className=" flex m-auto max-w-7xl flex-col md:flex-row items-center md:justify-between justify-center mt-3 md:mt-5 lg:mt-10 px-10 gap-y-3 md:gap-y-0">
+    <div className="  my-3 md:my-4 lg:my-5 text-[#9c9ea4] border-t-2 border-[#6d7078]">
+      <div className=" flex m-auto max-w-7xl flex-col md:flex-row items-center md:justify-between justify-center my-2 md:my-3 lg:my-5 px-10 gap-y-3 md:gap-y-0">
         <Paragraph>Olamilekan Akanni &copy; 2025</Paragraph>
         <span className="flex gap-4 item-center">
           {socials.map((social) => {

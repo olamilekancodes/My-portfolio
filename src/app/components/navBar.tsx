@@ -64,13 +64,15 @@ const NavBar = () => {
         whileHover="hover"
         initial="rest"
       >
-        <Image
-          src="/Images/newest.png"
-          alt="Logo"
-          width={150}
-          height={80}
-          className="w-[130px] md:w-[150px]"
-        />
+        <Link href={"/"} onClick={() => setActiveSection("/")}>
+          <Image
+            src="/Images/newest.png"
+            alt="Logo"
+            width={150}
+            height={80}
+            className="w-[130px] md:w-[150px]"
+          />
+        </Link>
 
         <motion.div
           className="block w-2 h-2 bg-[#a475d9] rounded-full"
