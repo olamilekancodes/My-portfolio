@@ -14,9 +14,31 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Olamilekan's Portfolio",
-  description: "Welcome to my portfolio",
+  title: "Olamilekan Akanni | Portfolio",
+  description: "Frontend Developer",
   icons: "/favicon.ico",
+  openGraph: {
+    title: "Olamilekan Akanni | Portfolio",
+    description: "Frontend Developer",
+    url: "https://olamilekanakanni.vercel.app/",
+    siteName: "Olamilekan Akanni's Portfolio",
+    images: [
+      {
+        url: "https://olamilekanakanni.vercel.app/favicon.ico",
+        width: 1200,
+        height: 630,
+        alt: "Olamilekan Akanni's photo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Olamilekan Akanni | Portfolio",
+    description: "Frontend Developer",
+    images: ["https://olamilekanakanni.vercel.app/favicon.ico"],
+  },
 };
 
 export default function RootLayout({
