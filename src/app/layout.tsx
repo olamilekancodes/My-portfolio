@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Olamilekan Akanni's Portfolio",
     images: [
       {
-        url: "https://olamilekanakanni.vercel.app/favicon.ico",
+        url: "https://olamilekanakanni.vercel.app/meta-image.jpg",
         width: 1200,
         height: 630,
         alt: "Olamilekan Akanni's photo",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Olamilekan Akanni | Portfolio",
     description: "Frontend Developer",
-    images: ["https://olamilekanakanni.vercel.app/favicon.ico"],
+    images: ["https://olamilekanakanni.vercel.app/meta-image.jpg"],
   },
 };
 
