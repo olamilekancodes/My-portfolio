@@ -56,15 +56,15 @@ const NavBar = () => {
 
   return (
     <div className="flex items-center justify-between text-[#eaeaea] sticky top-0 py-5 shadow-sm md:px-10 px-3  bg-[#fff] z-50">
-      <motion.div
-        className="flex p-2 cursor-pointer items-end"
-        onClick={() => {
-          setOpenSideBar(false);
-        }}
-        whileHover="hover"
-        initial="rest"
-      >
-        <Link href={"/"} onClick={() => setActiveSection("/")}>
+      <Link href={"/"} onClick={() => setActiveSection("/")}>
+        <motion.div
+          className="flex p-2 cursor-pointer items-end"
+          onClick={() => {
+            setOpenSideBar(false);
+          }}
+          whileHover="hover"
+          initial="rest"
+        >
           <Image
             src="/Images/newest.png"
             alt="Logo"
@@ -72,25 +72,25 @@ const NavBar = () => {
             height={80}
             className="w-[130px] md:w-[150px]"
           />
-        </Link>
 
-        <motion.div
-          className="block w-2 h-2 bg-[#a475d9] rounded-full"
-          variants={{
-            rest: { y: 0 },
-            hover: {
-              y: -4,
-              transition: {
-                type: "spring",
-                stiffness: 600,
-                damping: 10,
-                repeat: 1,
-                repeatType: "reverse",
+          <motion.div
+            className="block w-2 h-2 bg-[#6605e3] rounded-full"
+            variants={{
+              rest: { y: 0 },
+              hover: {
+                y: -4,
+                transition: {
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 10,
+                  repeat: 1,
+                  repeatType: "reverse",
+                },
               },
-            },
-          }}
-        />
-      </motion.div>
+            }}
+          />
+        </motion.div>
+      </Link>
 
       <div
         className="lg:hidden cursor-pointer text-[#37373C] mr-2"
