@@ -31,7 +31,7 @@ const projects = [
       "The Workspace HR App in Organogram Workspace is a powerful, cloud-based solution designed to simplify and automate human resource management. It provides businesses with an all-in-one platform to manage employee data, track attendance, oversee performance, and enhance the overall employee experience.",
     image: "/Images/hr.jpg",
     bgImage: "/Images/project-background/bg3.png",
-    link: "https://people.organogram.app/",
+    link: "https://ws-people.web.app",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const projects = [
       "The Workspace Payroll App is a powerful, automated payroll processing solution designed to simplify salary calculations, tax deductions, and compliance reporting. It ensures accurate, timely payments while reducing administrative workload, making it the perfect payroll management tool for businesses of all sizes.",
     image: "/Images/payroll.jpg",
     bgImage: "/Images/project-background/bg4.png",
-    link: "https://payroll.organogram.app/",
+    link: "https://ws-payroll.web.app",
   },
 ];
 
