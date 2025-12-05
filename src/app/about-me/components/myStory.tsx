@@ -4,7 +4,7 @@ const MyStory = () => {
   return (
     <>
       <Paragraph>
-        My journey as a frontend developer began in 2020, during the COVID-19
+        My journey as a software engineer began in 2020, during the COVID-19
         lockdown. With the world on pause, I saw the stay-at-home curfew as an
         opportunity to invest in myself, so I dived into online classes on web
         development. What started as curiosity quickly grew into passion, and I
