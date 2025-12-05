@@ -21,7 +21,7 @@ export const MessageButton = ({ action, title }: ButtonProps) => {
 export const ResumeButton = () => {
   return (
     <Link
-      href="https://drive.google.com/file/d/15AEpZWCeQzgCeD_gkLt_fpE16kYGMMyg/view?usp=sharing"
+      href="https://drive.google.com/file/d/1tG3p5hkoshlSVtJsA0bAynDZat6G-vUG/view?usp=sharing"
       target="_blank"
       className="p-4 rounded-lg bg-none border-2 border-black text-xs lg:text-[1rem] font-semibold hover:bg-black hover:text-white transition-colors duration-300"
     >
