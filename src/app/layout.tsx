@@ -15,11 +15,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Olamilekan Akanni | Portfolio",
-  description: "Frontend Developer",
+  description: "Software Engineer",
   icons: "/favicon.ico",
   openGraph: {
     title: "Olamilekan Akanni | Portfolio",
-    description: "Frontend Developer",
+    description: "Software Engineer",
     url: "https://olamilekanakanni.vercel.app/",
     siteName: "Olamilekan Akanni's Portfolio",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Olamilekan Akanni | Portfolio",
-    description: "Frontend Developer",
+    description: "Software Engineer",
     images: ["https://olamilekanakanni.vercel.app/meta-image.jpg"],
   },
 };

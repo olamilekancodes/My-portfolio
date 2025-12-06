@@ -10,7 +10,7 @@ import MyStory from "./components/myStory";
 
 const skills = [
   {
-    title: "Frontend",
+    title: "Technical Skills",
     list: [
       "HTML5",
       "CSS3",
@@ -35,6 +35,9 @@ const skills = [
       "Git/GitHub",
       "Responsiveness",
       "Basic Knowledge of Backend",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
     ],
   },
   {
@@ -42,7 +45,7 @@ const skills = [
     list: ["Webflow", "Basic Knowledge of Bubble"],
   },
   {
-    title: "Soft Skill",
+    title: "Soft Skills",
     list: [
       "Problem-Solving & Debugging",
       "Effective Communication",
@@ -87,7 +90,7 @@ const AboutModule = () => {
             <span className="text-[#6e06f2]">About</span> Me
           </>
         }
-        paragraph="Crafting seamless and visually engaging user experiences is my passion. As a frontend developer, I put my creativity and attention to detail into every project, turning ideas into responsive and functional websites and applications."
+        paragraph="Crafting seamless and visually engaging user experiences is my passion. As a software engineer specialized in frontend development, I put my creativity and attention to detail into every project, turning ideas into responsive and functional websites and applications."
       />
 
       <Banner />
