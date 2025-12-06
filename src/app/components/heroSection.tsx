@@ -49,7 +49,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between justify-start items-start mt-0 xl:mt-10 py-10 gap-15 md:gap-0 ">
       <div className="flex flex-col lg:basis-1/2 w-full justify-center text-[#37373C]  mb-20 lg:mb-0">
-        <Typewriter text="Hey, I'm Olamilekan Akanni" className="text-[#222]" />
+        <Typewriter text="Hi, I'm Olamilekan Akanni" className="text-[#222]" />
 
         <div className="flex flex-col text-[#222] my-3">
           <div className="flex items-center">
