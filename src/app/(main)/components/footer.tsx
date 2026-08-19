@@ -3,7 +3,6 @@
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { Paragraph } from "../shared/Typography";
 
 const socials = [
   {

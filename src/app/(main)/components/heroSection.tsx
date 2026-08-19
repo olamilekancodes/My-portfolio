@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
-import { MessageButton, ResumeButton } from "../shared/Button";
-import { Paragraph } from "../shared/Typography";
 import { useEffect, useState } from "react";
+import { Paragraph } from "@/app/shared/Typography";
+import { MessageButton, ResumeButton } from "@/app/shared/Button";
 
 interface TypewriterProps {
   text: string;

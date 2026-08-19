@@ -8,8 +8,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { usePathname, useRouter } from "next/navigation";
-
-import { MessageButton } from "../shared/Button";
+import { MessageButton } from "@/app/shared/Button";
 
 const navItems = [
   { id: "home", label: "Home", link: "/" },

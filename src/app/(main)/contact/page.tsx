@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Image from "next/image";
 import { toast } from "sonner";
-import { PageTitle } from "../shared/PageTitle";
+import { PageTitle } from "../../shared/PageTitle";
 import Link from "next/link";
 
 const Contact = () => {
@@ -31,7 +31,7 @@ const Contact = () => {
     const nameInput = form.elements.namedItem("name") as HTMLInputElement;
     const emailInput = form.elements.namedItem("email") as HTMLInputElement;
     const messageInput = form.elements.namedItem(
-      "message"
+      "message",
     ) as HTMLTextAreaElement;
 
     if (!nameInput.value || !emailInput.value || !messageInput.value) {

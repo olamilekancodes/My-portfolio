@@ -3,8 +3,8 @@
 import { useRouter } from "next/navigation";
 
 import ProjectListings from "../projects/list";
-import { PageNavigationButton } from "../shared/Button";
-import EnhancedHomepageSectionTitle from "../shared/EnhancedHomepageSectionTitle";
+import EnhancedHomepageSectionTitle from "@/app/shared/EnhancedHomepageSectionTitle";
+import { PageNavigationButton } from "@/app/shared/Button";
 import MyStory from "../about-me/components/myStory";
 
 const HomepageSections = () => {
