@@ -26,7 +26,7 @@ export default function NotFoundPage() {
         <h1 className="text-2xl md:text-3xl font-bold text-zinc-900">
           Page Not Found
         </h1>
-        <p className="text-zinc-500 text-sm md:text-base">
+        <p className="text-[#9498a0] text-sm md:text-base">
           Let's head back to explore the portfolio.
         </p>
       </div>
