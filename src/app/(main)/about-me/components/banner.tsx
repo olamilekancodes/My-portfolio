@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
-import { Paragraph } from "../../shared/Typography";
+import { Paragraph } from "../../../shared/Typography";
 
 const banner = [
   {

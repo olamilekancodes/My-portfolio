@@ -1,4 +1,4 @@
-import { PageTitle } from "../shared/PageTitle";
+import { PageTitle } from "@/app/shared/PageTitle";
 import ProjectListings from "./list";
 
 const Projects = () => {

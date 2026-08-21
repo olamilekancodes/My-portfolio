@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 
-import { PageTitle } from "../shared/PageTitle";
-import { Paragraph } from "../shared/Typography";
-import EnhancedSectionTitle from "../shared/EnhancedSectionTitle";
+import { PageTitle } from "../../shared/PageTitle";
+import { Paragraph } from "../../shared/Typography";
+import EnhancedSectionTitle from "../../shared/EnhancedSectionTitle";
 import Banner from "./components/banner";
 import MyStory from "./components/myStory";
 
