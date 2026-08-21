@@ -4,35 +4,46 @@ const MyStory = () => {
   return (
     <>
       <Paragraph>
-        My journey as a software engineer focusing on frontend development began
-        in 2020, during the COVID-19 lockdown. With the world on pause, I saw
-        the stay-at-home curfew as an opportunity to invest in myself, so I
-        dived into online classes on web development. What started as curiosity
-        quickly grew into passion, and I became a self-taught developer.
+        My journey into frontend engineering began in 2020 during the global
+        COVID-19 lock-down. Seizing the opportunity of the stay-at-home period
+        to pivot into tech, I immersed myself in intensive web development
+        curriculums. What started as self-driven curiosity rapidly evolved into
+        a dedicated career path, building a strong foundation in modern web
+        technologies through independent study.
       </Paragraph>
       <Paragraph>
-        After the pandemic era, I landed my first internship at Adeoye Orimoloye
-        & Co, where I worked on the law firm’s website using Webflow. Shorlty
-        after, I transitioned to a role at a digital agency, where I started
-        gaining real life experience in writing codes. That experience opened
-        doors for me.
+        Following my self-taught beginnings, I secured my first professional
+        experience as an intern at Colphat Tech, designing and building their
+        corporate web presence using Webflow. Shortly after, I transitioned into
+        a fast-paced role at a Adeoye Orimoloye & Co, where I translated design
+        concepts into production-ready code and gained invaluable exposure to
+        collaborative engineering environments.
       </Paragraph>
       <Paragraph>
-        Later, I joined Sync Skill, a Nigerian-Australian tech company. There, I
-        contributed to a B2C web application and successfully implemented the
-        Stripe payment gateway, gaining valuable hands-on experience with
-        real-world product challenges.
+        Building on that momentum, I joined Sync Skill, a Nigerian-Australian
+        technology firm. In this role, I contributed to a dynamic B2C web
+        application and successfully integrated the Stripe payment gateway,
+        deepening my expertise in handling real-world architectural challenges,
+        secure financial transactions and user-centric application workflows.
       </Paragraph>
       <Paragraph>
-        I currently work at Organogram, an enterprise solutions company building
-        HR, payroll, and employee performance applications for organizations of
-        different sizes. Each step of this journey has sharpened my skills and
-        deepened my love for creating seamless and impactful user experiences.
+        Later, I brought my experience to Organogram - an enterprise solutions
+        company - where I helped build HR, payroll and employee performance
+        applications for organizations of different sizes, further sharpening my
+        skills in delivering robust enterprise-grade products.
       </Paragraph>
       <Paragraph>
-        Looking ahead, I aspire to work on projects that cross continents,
-        building digital solutions that connect people from different places and
-        make the world feel just a little closer.
+        I currently serve as a Senior Frontend Web Engineer at Sparkle, a
+        prominent microfinance bank. In this role, I lead the frontend
+        development for our corporate website and architect robust virtual
+        account money collection web applications designed for organizations and
+        enterprises to manage and streamline their payment collections at scale.
+      </Paragraph>
+      <Paragraph>
+        Looking forward, I aspire to collaborate with forward-thinking teams on
+        global-scale products—building digital architecture that transcends
+        borders, bridges communities and delivers exceptional value to users
+        worldwide.
       </Paragraph>
     </>
   );
