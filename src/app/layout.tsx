@@ -45,21 +45,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <html lang="en">
-    //   <body
-    //     className={`${poppins.variable} antialiased bg-[#fff] min-h-screen flex flex-col`}
-    //   >
-    //     <Toaster position="top-right" richColors />
-    //     <NavBar />
-    //     <main className="flex-grow">
-    //       <div className="m-auto max-w-6xl px-5 flex flex-col gap-10 my-20">
-    //         {children}
-    //       </div>
-    //     </main>
-    //     <FooterModule />
-    //   </body>
-    // </html>
-
     <html lang="en">
       <body
         className={`${poppins.variable} antialiased bg-[#fff] min-h-screen flex flex-col`}
